@@ -30,6 +30,6 @@ class DetailsController < ApplicationController
 
 	private
 	def detail_params
-		params.require(:detail).permit(:firstname, :lastname, :email, :password_salt)
+		params.require(:detail).permit(:firstname, :lastname, :email, :password1)
 	end
 end
