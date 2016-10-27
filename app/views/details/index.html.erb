@@ -1,0 +1,20 @@
+
+<table border="1">
+ <tr>
+ 	<th>Firstname</th>
+	<th>Lastname</th>
+	<th>Email</th>
+ </tr>
+
+<% @details.each do |b|%>
+<tr>
+<td><%= b.firstname%></td>
+<td><%= b.lastname%></td>
+<td><%= b.email%></td>
+
+<td><%= link_to 'Edit User', detail_edit_path(b)%></td>
+<td><%= link_to 'Destroy User', detail_destroy_path(b),method: :delete, data: {confirm: 'Are you sure?'}%></td>
+</tr>
+<%end%>
+</table>
+<td><%= link_to 'Create New', detail_new_path%></td>
