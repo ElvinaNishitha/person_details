@@ -5,8 +5,11 @@ class DetailsController < ApplicationController
 
 	def create
 		@detail = Detail.new(detail_params)
-		@detail.save
+		if @detail.save
 		redirect_to detail_list_path
+	else
+		render "new"
+		end 
 	end
 
 	def index
@@ -26,6 +29,10 @@ class DetailsController < ApplicationController
 		@detail = Detail.find_by_id(params[:id])
 		@detail.destroy
 		redirect_to detail_list_path
+	end
+
+	def profile
+		@detail = Detail.find_by_id(params[:id])
 	end
 
 	private

@@ -8,8 +8,17 @@ Rails.application.routes.draw do
   post 'detail/new' => 'details#create', :as =>'detail_create'
   get 'details/list' => 'details#index', :as => 'detail_list'
   get 'detail/:id/edit' => 'details#edit', :as =>'detail_edit'
-  get 'detail/:id/edit' => 'details#update', :as =>'detail_update'
+  put 'detail/:id/edit' => 'details#update', :as =>'detail_update'
   delete 'detail:id' => 'details#destroy', :as => 'detail_destroy'
+  get 'detail/:id' => 'details#profile', :as => 'detail_profile'
+
+  get 'project/new' => 'projects#new', :as => 'project_new'
+  post 'project/new' => 'projects#create', :as =>'project_create'
+  get 'project/list' => 'projects#index', :as => 'project_list'
+
+
+
+
 
 
   # Example of regular route:

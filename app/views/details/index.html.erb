@@ -14,7 +14,9 @@
 
 <td><%= link_to 'Edit User', detail_edit_path(b)%></td>
 <td><%= link_to 'Destroy User', detail_destroy_path(b),method: :delete, data: {confirm: 'Are you sure?'}%></td>
+<td><%= link_to 'View Profile', detail_profile_path(b)%></td>
 </tr>
 <%end%>
 </table>
 <td><%= link_to 'Create New', detail_new_path%></td>
+

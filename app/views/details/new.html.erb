@@ -1,4 +1,11 @@
+
+
 <%= form_for :detail do |f|%>
+<ul>
+<% @detail.errors.full_messages.each do |msg| %>
+<li><%= msg%></li>
+<% end %>
+</ul>
 <p>
 	<%= f.label :firstname%><br>
 	<%= f.text_field :firstname%>
@@ -21,4 +28,3 @@
 
 <%end%>
 
-<!-- rails generate migration add_fieldname_to_tablename fieldname:string -->
